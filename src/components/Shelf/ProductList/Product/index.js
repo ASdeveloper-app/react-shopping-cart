@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+import { FcShipped } from 'react-icons/fc';
+
 import Thumb from '../../../Thumb';
 import { formatPrice } from '../../../../services/util';
 import { addProduct } from '../../../../services/cart/actions';
@@ -18,7 +20,7 @@ const Product = ({ product, addProduct }) => {
 
     productInstallment = (
       <div className="installment">
-        <span>or {product.installments} x</span>
+        <span>o {product.installments} x</span>
         <b>
           {product.currencyFormat}
           {formatPrice(installmentPrice, product.currencyId)}
@@ -34,7 +36,7 @@ const Product = ({ product, addProduct }) => {
       data-sku={product.sku}
     >
       {product.isFreeShipping && (
-        <div className="shelf-stopper">Envio gratis</div>
+        <div className="shelf-stopper"><FcShipped size="4vw" /></div>
       )}
       <Thumb
         classes="shelf-item__thumb"
