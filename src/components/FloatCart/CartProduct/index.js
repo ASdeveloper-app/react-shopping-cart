@@ -71,7 +71,7 @@ class CartProduct extends Component {
             Cantidad: {product.quantity}
           </p>
         </div>
-        <div className="shelf-item__price">
+        <div className="shelf-item__price font">
           <p>{`${product.currencyFormat}  ${formatPrice(product.price)}`}</p>
           <div>
             <button onClick={this.handleOnDecrease} disabled={product.quantity === 1 ? true : false} className="change-product-button">-</button>
