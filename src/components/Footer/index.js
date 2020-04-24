@@ -10,6 +10,5 @@ export default () => (
     <a class="link" href="https://www.liverpool.com.mx/tienda/home"> Liverpool.com</a>
 
     <p class="name" > Arturo Gabriel Araujo Alvarez </p>
-    <a class="link" href="https://www.liverpool.com.mx/tienda/home"> Liverpool.com</a>
   </div>
 );
