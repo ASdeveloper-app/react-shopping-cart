@@ -29,6 +29,22 @@ const Product = ({ product, addProduct }) => {
     );
   }
 
+  let productPromo;
+
+  if (!!product.promoPrice) {
+    const promoPrice = product.promoPrice;
+
+    productPromo = (
+      <div className="installment">
+        <b>
+          {product.currencyFormat}
+          {formatPrice(promoPrice, product.currencyId)}
+        </b>
+      </div>
+    );
+  }
+
+  
   return (
     <div
       className="shelf-item"
@@ -52,6 +68,7 @@ const Product = ({ product, addProduct }) => {
         </div>
         {productInstallment}
       </div>
+      <p className="shelf-item__promo">{productPromo}</p>
       <div className="shelf-item__buy-btn">Agregar al Carrito</div>
     </div>
   );
