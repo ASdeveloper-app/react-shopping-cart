@@ -8,6 +8,8 @@ import Thumb from '../../../Thumb';
 import { formatPrice } from '../../../../services/util';
 import { addProduct } from '../../../../services/cart/actions';
 
+
+
 const Product = ({ product, addProduct }) => {
   product.quantity = 1;
 
@@ -31,7 +33,7 @@ const Product = ({ product, addProduct }) => {
 
   let productPromo;
 
-  if (!!product.promoPrice) {
+  if (product.promoPrice < product.price) {
     const promoPrice = product.promoPrice;
 
     productPromo = (
@@ -44,6 +46,13 @@ const Product = ({ product, addProduct }) => {
     );
   }
 
+  const completedStyle = {
+    color: "#d8d8d8",
+    textDecorationLine: "line-through",
+    textDecorationColor: "#e10098",
+    fontSize: "1.5em",
+
+  }
   
   return (
     <div
@@ -63,8 +72,8 @@ const Product = ({ product, addProduct }) => {
       <div className="shelf-item__price">
         <div className="val">
           <small>{product.currencyFormat}</small>
-          <b>{formattedPrice.substr(0, formattedPrice.length - 3)}</b>
-          <span>{formattedPrice.substr(formattedPrice.length - 3, 3)}</span>
+          <b style={product.promoPrice ? completedStyle : null} >{formattedPrice.substr(0, formattedPrice.length - 3)}</b>
+          <span style={product.promoPrice ? completedStyle : null} >{formattedPrice.substr(formattedPrice.length - 3, 3)}</span>
         </div>
         {productInstallment}
       </div>
