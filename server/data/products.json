@@ -232,6 +232,7 @@
       "availableSizes": ["L", "XL"],
       "style": "",
       "price": 49.0,
+      "promoPrice": 22.45,
       "installments": 9,
       "currencyId": "USD",
       "currencyFormat": "$",

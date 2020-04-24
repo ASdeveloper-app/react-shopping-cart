@@ -20,7 +20,7 @@ const Product = ({ product, addProduct }) => {
 
     productInstallment = (
       <div className="installment">
-        <span>o {product.installments} x</span>
+        <span>o {product.installments} pagos de </span>
         <b>
           {product.currencyFormat}
           {formatPrice(installmentPrice, product.currencyId)}
