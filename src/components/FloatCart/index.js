@@ -149,14 +149,14 @@ class FloatCart extends Component {
             <span className="bag">
               <span className="bag__quantity">{cartTotal.productQuantity}</span>
             </span>
-            <span className="header-title">Cart</span>
+            <span className="header-title">Carrito</span>
           </div>
 
           <div className="float-cart__shelf-container">
             {products}
             {!products.length && (
               <p className="shelf-empty">
-                Add some products in the cart <br />
+                Añade algunos productos en el carrito <br />
                 :)
               </p>
             )}
@@ -174,7 +174,7 @@ class FloatCart extends Component {
               <small className="sub-price__installment">
                 {!!cartTotal.installments && (
                   <span>
-                    {`OR UP TO ${cartTotal.installments} x ${
+                    {`O ${cartTotal.installments} PAGOS DE ${
                       cartTotal.currencyFormat
                     } ${formatPrice(
                       cartTotal.totalPrice / cartTotal.installments,

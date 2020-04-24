@@ -48,7 +48,7 @@
       border: 1px solid #eee;
 
       .shelf-item__buy-btn {
-        background-color: #eabf00;
+        background-color: #666666;
       }
     }
 
@@ -77,7 +77,7 @@
         content: '';
         width: 20px;
         height: 2px;
-        background-color: #eabf00;
+        background-color: #e10098;
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -101,7 +101,7 @@
     }
 
     &__buy-btn {
-      background-color: #1b1a20;
+      background-color: #e10098;
       color: #fff;
       padding: 15px 0;
       margin-top: 10px;

@@ -36,7 +36,7 @@ const Product = ({ product, addProduct }) => {
       data-sku={product.sku}
     >
       {product.isFreeShipping && (
-        <div className="shelf-stopper"><FcShipped size="4vw" /></div>
+        <div className="shelf-stopper"><FcShipped  size="4vw"/></div>
       )}
       <Thumb
         classes="shelf-item__thumb"
@@ -52,7 +52,7 @@ const Product = ({ product, addProduct }) => {
         </div>
         {productInstallment}
       </div>
-      <div className="shelf-item__buy-btn">Add to cart</div>
+      <div className="shelf-item__buy-btn">Agregar al Carrito</div>
     </div>
   );
 };
